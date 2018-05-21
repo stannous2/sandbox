@@ -1,0 +1,74 @@
+* {
+  /* this makes it so the padding is included in the height of an element */
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li + li {
+  margin-top: 5px;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 10px;
+}
+
+body, html {
+  margin: 0;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.3);
+  background-color: whitesmoke;
+  top: 0;
+  left: 0;
+
+}
+
+.content {
+  min-height: calc(100vh - 100px);
+  padding: 50px;
+  display: flex;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 -1px 1px 1px rgba(0,0,0,.3);
+  background-color: whitesmoke;
+}
+
+/* Fill in the styles below as best as you can */
+
+.content__sidebar-wrapper {
+  width: 180px;
+}
+
+.content__sidebar {
+  
+  position: fixed;
+  background-color: antiquewhite;
+  width: inherit;
+}
+
+.content__main {
+  flex: 1;
+  margin-left: 20px;
+
+}
