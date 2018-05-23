@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Activities0522</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Drink Selection!</h1>
+    <hr>
+
+    <!-- Here we create a generic drink-options div -->
+    <div id="drink-options"></div>
+
+    <script>
+        var drinkList = [
+            "Coffee: $5",
+            "Espresso: $7",
+            "Cappuccino: $6",
+            "Latte: $4",
+            "Tea: $3",
+            "Ice Coffee: $6",
+            "Ice Espresso: $8",
+            "Ice Latte: $6",
+            "Ice Tea: $4"
+        ];
+        let $targetDiv = $('#drink-options');
+
+        /* for (let i = 0; i < drinkList.length; i++) {
+            let drinkOption = $('<p>');
+
+            drinkOption.html = drinkList[i];
+
+            targetDiv.append(drinkOption);
+        } */
+
+        function appendDrinkToPage(thing) {
+            let $drinkOption = $('<p>');
+            $drinkOption.html(thing);
+            
+            $targetDiv.append($drinkOption);
+        }
+
+        $.each(appendDrinkToPage);
+    </script>
+</body>
+
+</html>
