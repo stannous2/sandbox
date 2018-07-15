@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="./test.js"></script> 
+</head>
+
+<body>
+    
+    <div id="openweathermap-widget-15"></div>
+    <script>
+        console.log('it begins here....')
+        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+        window.myWidgetParam.push({
+            id: 15,
+            cityid: '4930956',
+            appid: 'b06819dc1e78aaad6ffe9488eb5b61d9',
+            units: 'metric',
+            containerid: 'openweathermap-widget-15',
+        });
+        console.log('array... ' + window.myWidgetParam.cityid);
+
+        (function () {
+            var script = document.createElement('script');
+            script.async = true;
+            script.charset = "utf-8";
+            script.src = "./test.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(script, s);
+        })();
+    </script>
+</body>
+
+</html>

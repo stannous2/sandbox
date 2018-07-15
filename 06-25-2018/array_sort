@@ -1,0 +1,25 @@
+const $ = require('jquery');
+
+$.ajax('https://randomuser.me/api/?results=10&inc=gender,name,nat,email,phone')
+  .then(function(data) { 
+    return sortByFirstName(data) 
+  })
+  .then(function(filterResult) { 
+    console.log(filterResult) 
+  })
+
+// sorts the users by their first names and returns the new array
+function sortByFirstName(data) {
+  const users = data.results;
+  
+  // all the code you need to change will go in the callback function 
+  // of the sort method
+  return users.sort(function(a, b){
+    let aFirst = a.name.first;
+    let bFirst = b.name.first;
+
+    if (aFirst < bFirst) return -1;
+    if (aFirst > bFirst) return 1;
+    return 0
+  });
+}

@@ -1,0 +1,31 @@
+.landingpage {
+    background-size: 100%;
+    height: 500px;
+    background-color: burlywood;
+}
+
+.title {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+#status-bar {
+    width: 150px;
+    height: 40px;
+    background-color: aqua;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+h2 {
+    margin: auto;
+}
+#button {
+    display: flex;
+}
+#garage-door {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+}
